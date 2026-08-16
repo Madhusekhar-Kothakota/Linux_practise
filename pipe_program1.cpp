@@ -19,7 +19,7 @@ int main()
     {
        close(fd[0]);
         char  msg[]="Hello from parent";
-        write(fd[1], msg, sizeof(msg));
+        write(fd[1], msg, strlen(msg)+1);
         cout<<"Parent process"<<endl;
         close(fd[1]);
     }
